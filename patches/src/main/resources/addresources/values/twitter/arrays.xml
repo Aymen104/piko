@@ -108,6 +108,7 @@
         <item>@string/piko_native_translator_google</item>
         <item>@string/piko_native_translator_google_v2</item>
         <item>@string/piko_native_translator_fxtwitter</item>
+        <item>@string/piko_native_translator_deepl</item>
     </string-array>
 
     <string-array name="piko_array_search_type_ahead">
@@ -190,6 +191,7 @@
         <item>0</item>
         <item>1</item>
         <item>2</item>
+        <item>3</item>
     </string-array>
 
     <string-array name="piko_array_search_type_ahead_val">

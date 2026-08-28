@@ -111,6 +111,10 @@ public class Pref {
         return Utils.getStringPref(Settings.NATIVE_TRANSLATOR_LANG);
     }
 
+    public static String deeplApiKey() {
+        return Utils.getStringPref(Settings.NATIVE_TRANSLATOR_DEEPL_KEY);
+    }
+
     public static boolean enableNativeReaderMode() {
         return Utils.getBooleanPref(Settings.NATIVE_READER_MODE) && SettingsStatus.nativeReaderMode;
     }

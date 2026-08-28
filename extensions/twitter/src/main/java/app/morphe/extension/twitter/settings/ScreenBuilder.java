@@ -467,6 +467,13 @@ public class ScreenBuilder {
                             Settings.NATIVE_TRANSLATOR_LANG
                     )
             );
+            addPreference(category,
+                    helper.editTextPreference(
+                            str("piko_native_translator_deepl_key"),
+                            str("piko_native_translator_deepl_key_desc"),
+                            Settings.NATIVE_TRANSLATOR_DEEPL_KEY
+                    )
+            );
 
         }
 

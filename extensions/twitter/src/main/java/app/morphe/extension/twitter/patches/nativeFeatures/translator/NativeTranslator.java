@@ -15,6 +15,7 @@ import app.morphe.extension.twitter.patches.nativeFeatures.translator.providers.
 import app.morphe.extension.twitter.patches.nativeFeatures.translator.providers.GTranslate;
 import app.morphe.extension.twitter.patches.nativeFeatures.translator.providers.GTranslateV2;
 import app.morphe.extension.twitter.patches.nativeFeatures.translator.providers.FxTwitterTranslate;
+import app.morphe.extension.twitter.patches.nativeFeatures.translator.providers.DeepLTranslate;
 import app.morphe.extension.twitter.Pref;
 
 import app.morphe.extension.twitter.entity.Tweet;
@@ -50,6 +51,10 @@ public class NativeTranslator {
                 }
                 case 2: {
                     translator = new FxTwitterTranslate();
+                    break;
+                }
+                case 3: {
+                    translator = new DeepLTranslate();
                     break;
                 }
                 default: {

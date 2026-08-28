@@ -76,6 +76,11 @@
     <string name="piko_native_translator_google">Google translator</string>
     <string name="piko_native_translator_google_v2">Google translator V2</string>
     <string name="piko_native_translator_fxtwitter">FxTwitter API</string>
+    <string name="piko_native_translator_deepl">DeepL API</string>
+    <string name="piko_native_translator_deepl_key">DeepL API key</string>
+    <string name="piko_native_translator_deepl_key_desc">AI-based translation. Get a free API key at https://www.deepl.com/pro-api</string>
+    <string name="piko_native_translator_deepl_no_key">DeepL API key not set. Add it in Piko settings.</string>
+    <string name="piko_native_translator_deepl_unsupported_lang">Language %1$s is not supported by DeepL</string>
 
     <string name="piko_title_native_reader_mode">Reader mode</string>
     <string name="piko_native_reader_mode_toggle">Enable reader mode</string>

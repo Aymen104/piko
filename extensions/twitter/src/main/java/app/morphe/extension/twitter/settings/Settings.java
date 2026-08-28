@@ -65,6 +65,7 @@ public class Settings {
     public static final BooleanSetting NATIVE_TRANSLATOR = new BooleanSetting("native_translator", true);
     public static final StringSetting NATIVE_TRANSLATOR_PROVIDERS = new StringSetting("native_translator_providers", "0");
     public static final StringSetting NATIVE_TRANSLATOR_LANG = new StringSetting("native_translator_language", "en");
+    public static final StringSetting NATIVE_TRANSLATOR_DEEPL_KEY = new StringSetting("native_translator_deepl_key", "");
     public static final BooleanSetting NATIVE_READER_MODE = new BooleanSetting("native_reader_mode", true);
     public static final BooleanSetting NATIVE_READER_MODE_TEXT_ONLY_MODE = new BooleanSetting("native_reader_mode_text_only_mode", false);
     public static final BooleanSetting NATIVE_READER_MODE_HIDE_QUOTED_POST = new BooleanSetting("native_reader_mode_hide_quoted_post", false);
