@@ -13,6 +13,18 @@ jobs:
     name: Push strings
     runs-on: ubuntu-latest
     steps:
+      - name: Check Crowdin credentials
+        id: crowdin_check
+        env:
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+        run: |
+          if [ -z "$CROWDIN_PERSONAL_TOKEN" ] || [ "$CROWDIN_PERSONAL_TOKEN" = "PENDING_ADD_REAL_CROWDIN_TOKEN" ]; then
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "::notice title=Crowdin push skipped::No real CROWDIN_PERSONAL_TOKEN configured (empty or placeholder); skipping Crowdin push."
+          else
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Checkout dev
         uses: actions/checkout@v7
         with:
@@ -21,6 +33,7 @@ jobs:
           clean: true
 
       - name: Push strings
+        if: steps.crowdin_check.outputs.configured == 'true'
         uses: crowdin/github-action@v2
         with:
           config: crowdin.yml
